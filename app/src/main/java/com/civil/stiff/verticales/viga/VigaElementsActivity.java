@@ -1,4 +1,4 @@
-package com.civil.stiff.viga;
+package com.civil.stiff.verticales.viga;
 
 import androidx.appcompat.app.AppCompatActivity;
 

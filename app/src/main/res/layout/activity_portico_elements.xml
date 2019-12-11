@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="15dp"
     android:background="@color/fondo"
-    tools:context=".portico.PorticoElementsActivity">
+    tools:context=".verticales.portico.PorticoElementsActivity">
     <!--Header-->
     <RelativeLayout
         android:id="@+id/layoutHeader"
@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true">
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:src="@drawable/logo"
             android:layout_alignParentLeft="true"
             />
@@ -58,10 +58,9 @@
             android:id="@+id/radioBDos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="15sp"
+            android:layout_marginVertical="25sp"
             android:fontFamily="casual"
-            android:textSize="22sp"
-            android:textStyle="bold"
+            android:textSize="25sp"
             android:text="Dos"
             android:checked="true"
             android:buttonTint="@color/Titulo"
@@ -72,8 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="15sp"
             android:fontFamily="casual"
-            android:textSize="22sp"
-            android:textStyle="bold"
+            android:textSize="25sp"
             android:text="Tres"
             android:buttonTint="@color/Titulo"
             />
@@ -84,7 +82,9 @@
         android:id="@+id/botones"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="45dp"
+        >
         <Button
             android:id="@+id/bAtras"
             android:layout_width="wrap_content"

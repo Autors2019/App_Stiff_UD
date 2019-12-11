@@ -1,8 +1,7 @@
-package com.civil.stiff.viga;
+package com.civil.stiff.verticales.viga;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
@@ -15,14 +14,13 @@ import android.widget.Toast;
 
 import com.civil.stiff.R;
 import com.civil.stiff.TemplatePDF;
-import com.civil.stiff.viga.algoritmoviga.SolveViga;
-import com.civil.stiff.viga.algoritmoviga.matrix.RegidityMatrix;
+import com.civil.stiff.verticales.viga.algoritmoviga.SolveViga;
+import com.civil.stiff.verticales.viga.algoritmoviga.matrix.RegidityMatrix;
 
 import org.ejml.simple.SimpleMatrix;
 
 
 import java.text.DateFormat;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 import java.util.Calendar;

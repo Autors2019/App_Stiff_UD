@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="15dp"
     android:background="@color/fondo"
-    tools:context=".viga.VigaElementsActivity">
+    tools:context=".verticales.viga.VigaElementsActivity">
 
     <ImageView
         android:id="@+id/logo"

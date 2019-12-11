@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:padding="15dp"
     android:background="@color/fondo"
-    tools:context=".viga.VigaDefineForceVectorExt">
+    tools:context=".verticales.viga.VigaDefineForceVectorExt">
     <ImageView
         android:id="@+id/logo"
         android:layout_width="100dp"

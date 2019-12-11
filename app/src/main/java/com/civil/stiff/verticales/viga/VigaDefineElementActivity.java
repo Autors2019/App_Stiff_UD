@@ -1,4 +1,4 @@
-package com.civil.stiff.viga;
+package com.civil.stiff.verticales.viga;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,9 +15,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.civil.stiff.viga.algoritmoviga.UnidadesLongitud;
-import com.civil.stiff.viga.algoritmoviga.UnidadesPresion;
-import com.civil.stiff.viga.algoritmoviga.matrix.RegidityMatrix;
+import com.civil.stiff.verticales.trasversales.InterfaceElementos;
+import com.civil.stiff.verticales.trasversales.UnidadesLongitud;
+import com.civil.stiff.verticales.trasversales.UnidadesPresion;
+import com.civil.stiff.verticales.viga.algoritmoviga.matrix.RegidityMatrix;
 import com.civil.stiff.R;
 
 
@@ -25,7 +26,7 @@ import java.util.ArrayList;
 
 
 
-public class VigaDefineElementActivity extends AppCompatActivity {
+public class VigaDefineElementActivity extends AppCompatActivity implements InterfaceElementos {
 
     private int numeroElementos;
     private EditText tBase=null;
@@ -166,57 +167,8 @@ public class VigaDefineElementActivity extends AppCompatActivity {
 
    }
 
-    public boolean validarCampo(EditText editText){
-        String text= editText.getText().toString();
-        boolean estadoCampo=false;
-        double numero=0.0;
 
-        // Estado del campo
-        if(text.matches("")){
-            estadoCampo=false;
-        }
-        else{
-
-            numero= Double.parseDouble(text);
-            //Campo diferente a cero
-            if(numero!=0.0){
-                estadoCampo=true;
-            }
-            else{
-                estadoCampo=false;
-            }
-        }
-        return  estadoCampo;
-    }
-
-    public double  normalizarUnidadLonitud(UnidadesLongitud unidadesLongitud, double valor){
-
-        switch(unidadesLongitud){
-            case m:  valor= valor;
-                break;
-            case cm: valor= valor/100;
-                break;
-
-        }
-        return valor;
-    }
-
-    public double  normalizarUnidadPresion(UnidadesPresion unidadesPresion, double valor){
-
-        switch(unidadesPresion){
-            case Pa:  valor= valor;
-                break;
-            case kPa: valor= valor*1000;
-                break;
-            case MPa: valor= valor*1000000;
-                break;
-            case GPa: valor= valor*1000000000;
-                break;
-        }
-        return valor;
-    }
-
-    public void guardarMatrix( EditText eTBase, EditText eTAltura, EditText eTLongitud, EditText eTElasticidad, int elementos,ArrayList<RegidityMatrix> regidityMatrices){
+    private void guardarMatrix( EditText eTBase, EditText eTAltura, EditText eTLongitud, EditText eTElasticidad, int elementos,ArrayList<RegidityMatrix> regidityMatrices){
 
 
         if((validarCampo(eTBase)&& validarCampo(eTAltura) && validarCampo(eTLongitud)&& validarCampo(eTElasticidad))){

@@ -1,4 +1,4 @@
-package com.civil.stiff.viga.algoritmoviga.matrix;
+package com.civil.stiff.verticales.viga.algoritmoviga.matrix;
 
 import org.ejml.simple.SimpleMatrix;
 

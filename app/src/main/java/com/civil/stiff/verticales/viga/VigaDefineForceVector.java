@@ -1,4 +1,4 @@
-package com.civil.stiff.viga;
+package com.civil.stiff.verticales.viga;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,8 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.civil.stiff.R;
-import com.civil.stiff.viga.algoritmoviga.matrix.IndexMatrix;
-import com.civil.stiff.viga.algoritmoviga.matrix.RegidityMatrix;
+import com.civil.stiff.verticales.viga.algoritmoviga.matrix.IndexMatrix;
+import com.civil.stiff.verticales.viga.algoritmoviga.matrix.RegidityMatrix;
 
 import org.ejml.simple.SimpleMatrix;
 

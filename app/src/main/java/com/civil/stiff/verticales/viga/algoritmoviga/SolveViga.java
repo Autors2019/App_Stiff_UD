@@ -1,4 +1,4 @@
-package com.civil.stiff.viga.algoritmoviga;
+package com.civil.stiff.verticales.viga.algoritmoviga;
 
 
 
@@ -6,10 +6,10 @@ package com.civil.stiff.viga.algoritmoviga;
 
 import android.util.Log;
 
-import com.civil.stiff.viga.algoritmoviga.matrix.RegidityMatrix;
-import com.civil.stiff.viga.algoritmoviga.matrix.SubMatrix;
-import com.civil.stiff.viga.algoritmoviga.vector.IndexVector;
-import com.civil.stiff.viga.algoritmoviga.vector.SubVector;
+import com.civil.stiff.verticales.viga.algoritmoviga.matrix.RegidityMatrix;
+import com.civil.stiff.verticales.viga.algoritmoviga.matrix.SubMatrix;
+import com.civil.stiff.verticales.viga.algoritmoviga.vector.IndexVector;
+import com.civil.stiff.verticales.viga.algoritmoviga.vector.SubVector;
 
 import org.ejml.data.SingularMatrixException;
 import org.ejml.simple.SimpleMatrix;

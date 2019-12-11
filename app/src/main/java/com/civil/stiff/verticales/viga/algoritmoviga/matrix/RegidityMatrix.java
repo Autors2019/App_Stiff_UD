@@ -1,10 +1,12 @@
-package com.civil.stiff.viga.algoritmoviga.matrix;
+package com.civil.stiff.verticales.viga.algoritmoviga.matrix;
+
+import com.civil.stiff.verticales.trasversales.InterfaceMatrixElemento;
 
 import org.ejml.simple.SimpleMatrix;
 
 import java.io.Serializable;
 
-public class RegidityMatrix  implements Serializable {
+public class RegidityMatrix implements InterfaceMatrixElemento {
     private double l;
     private double b;
     private double h;
@@ -18,6 +20,7 @@ public class RegidityMatrix  implements Serializable {
         this.h= altura;
         this.i= ((b*(Math.pow(h,3)))/12);
     }
+    @Override
     public SimpleMatrix calculate(){
          m= new SimpleMatrix(4,4);
          m.setRow(0,0, (e*i*(12.0/Math.pow(l,3))), (e*i*(6.0/Math.pow(l,2))), (-e*i*(12.0/Math.pow(l,3))), (e*i*(6.0/Math.pow(l,2))));

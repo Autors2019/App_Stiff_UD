@@ -12,12 +12,13 @@
         android:roundIcon="@mipmap/stiff_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".portico.PorticoDefineElementActivity"></activity>
-        <activity android:name=".portico.PorticoElementsActivity" />
+        <activity android:name=".verticales.portico.PorticoMatrixOrderActivity"></activity>
+        <activity android:name=".verticales.portico.PorticoDefineElementActivity" />
+        <activity android:name=".verticales.portico.PorticoElementsActivity" />
         <activity android:name=".ViewPDFActivity" />
-        <activity android:name=".viga.VigaNumberDegreeFreeActivity" />
-        <activity android:name=".viga.VigaDefineForceVectorExt" />
-        <activity android:name=".viga.VigaDefineForceVector" />
+        <activity android:name=".verticales.viga.VigaNumberDegreeFreeActivity" />
+        <activity android:name=".verticales.viga.VigaDefineForceVectorExt" />
+        <activity android:name=".verticales.viga.VigaDefineForceVector" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,9 +26,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".viga.VigaMatrixOrderActivity" />
-        <activity android:name=".viga.VigaDefineElementActivity" />
-        <activity android:name=".viga.VigaElementsActivity" />
+        <activity android:name=".verticales.viga.VigaMatrixOrderActivity" />
+        <activity android:name=".verticales.viga.VigaDefineElementActivity" />
+        <activity android:name=".verticales.viga.VigaElementsActivity" />
         <activity android:name=".SelectorActivity" />
     </application>
 
