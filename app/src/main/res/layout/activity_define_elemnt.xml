@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_define_element"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:padding="15dp"
+    tools:context=".viga.VigaDefineElementActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"/>
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:fontFamily="casual"
+        android:text="Viga"
+        android:textColor="@color/Titulo"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titulo">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/subTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Defina cada uno de los elementos"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="casual"
+                android:textSize="21sp"
+                android:textColor="@color/Titulo"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/elementos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Elemento"
+                android:layout_below="@+id/subTitulo"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="casual"
+                android:textSize="22sp"
+                android:textColor="@color/Titulo"/>
+            <RelativeLayout
+                android:id="@+id/layoutBase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/elementos"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/textoBase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="casual"
+                    android:text="Base"
+                    android:textSize="22sp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <EditText
+                    android:id="@+id/entradaBase"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_toRightOf="@+id/textoBase"
+                    android:textDirection="firstStrongRtl"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    />
+
+                <Spinner
+                    android:id="@+id/unidadesBase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/entradaBase"
+
+
+                     />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/layoutAltura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutBase"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/textoAltura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="casual"
+                    android:text="Altura"
+                    android:textSize="22sp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <EditText
+                    android:id="@+id/entradaAltura"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30sp"
+                    android:layout_marginRight="35dp"
+                    android:layout_toRightOf="@+id/textoAltura"
+                    android:inputType="numberDecimal"
+                    android:textDirection="firstStrongRtl"
+                    android:hint="0"
+                    />
+
+                <Spinner
+                    android:id="@+id/unidadesAltura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/entradaAltura"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/layoutLongitud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutAltura"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/textoLongitud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="casual"
+                    android:text="Longitd"
+                    android:textSize="22sp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <EditText
+                    android:id="@+id/entradaLongitud"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_toRightOf="@+id/textoLongitud"
+                    android:inputType="numberDecimal"
+                    android:textDirection="firstStrongRtl"
+                    android:hint="0"
+                    />
+
+                <Spinner
+                    android:id="@+id/unidadesLongitud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/entradaLongitud"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/layoutElasticidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutLongitud"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/textoElasticidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="casual"
+                    android:text="E"
+                    android:textSize="22sp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <EditText
+                    android:id="@+id/entradaElasticidad"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_toRightOf="@+id/textoElasticidad"
+                    android:inputType="numberDecimal"
+                    android:textDirection="firstStrongRtl"
+                    android:hint="0"
+                    />
+
+                <Spinner
+                    android:id="@+id/unidadesElasticidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/entradaElasticidad"
+                    />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/guardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="true"
+                android:text="Guardar"
+                android:textAllCaps="false"
+                android:fontFamily="casual"
+                android:textSize="22sp"
+                android:layout_below="@+id/layoutElasticidad"
+                android:onClick="onClick"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/guardar"
+                android:layout_marginTop="40dp"
+                >
+
+                <Button
+                    android:id="@+id/atras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="Atras"
+                    android:textAllCaps="false"
+                    android:fontFamily="casual"
+                    android:textSize="22sp"
+                    android:onClick="onClick"
+                    />
+                <Button
+                    android:id="@+id/siguiente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Siguiente"
+                    android:textAllCaps="false"
+                    android:fontFamily="casual"
+                    android:textSize="22sp"
+                    android:onClick="onClick"
+                    />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

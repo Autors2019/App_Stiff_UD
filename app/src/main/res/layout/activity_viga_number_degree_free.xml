@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/fondo"
+    android:padding="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viga.VigaNumberDegreeFreeActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"/>
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:fontFamily="casual"
+        android:text="Viga"
+        android:textColor="@color/Titulo"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/subTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Por ultimo indique la cantidad de grados de libertad no restringidos para la estructura"
+        android:fontFamily="casual"
+        android:textSize="19sp"
+        android:layout_below="@id/titulo"
+        android:textColor="@color/Titulo"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/LayoutBotones"
+        android:layout_below="@+id/subTitulo">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/layoutHorizontalNS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true">
+                <Button
+                    android:id="@+id/botonRestar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    android:fontFamily="casual"
+                    android:textColor="@color/Titulo"
+                    android:onClick="onClick"
+                    />
+                <TextView
+                    android:id="@+id/textViewNumeroGrados"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="n=6"
+                    android:fontFamily="casual"
+                    android:textSize="22sp" />
+                <Button
+                    android:id="@+id/botonSumar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:fontFamily="casual"
+                    android:textColor="@color/Titulo"
+                    android:onClick="onClick"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutSpinnerNumeroGrados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/layoutHorizontalNS"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true">
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/LayoutBotones"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/atras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Atras"
+            android:textAllCaps="false"
+            android:fontFamily="casual"
+            android:textSize="22sp"
+            android:onClick="onClick"
+            />
+        <Button
+            android:id="@+id/siguiente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Siguiente"
+            android:textAllCaps="false"
+            android:fontFamily="casual"
+            android:textSize="22sp"
+            android:onClick="onClick"
+            />
+        ></RelativeLayout>
+</RelativeLayout>

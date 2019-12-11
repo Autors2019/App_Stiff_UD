@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/fondo"
+    tools:context=".viga.VigaDefineForceVectorExt">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"/>
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:fontFamily="casual"
+        android:text="Viga"
+        android:textColor="@color/Titulo"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/subTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diligencie el vector de fuerzas externas total en los nodos"
+        android:fontFamily="casual"
+        android:textSize="20sp"
+        android:layout_below="@id/titulo"
+        android:textColor="@color/Titulo"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/subTitulo1"
+        android:layout_below="@+id/subTitulo">
+
+        <RelativeLayout
+            android:id="@+id/containerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloY1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="Y =  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloY1"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt1"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloM1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="M=  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloM1"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt2"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloY2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="Y =  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloY2"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt3"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloM4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="M=  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloM4"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt4"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloY5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="Y =  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloY5"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt5"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloM6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="M=  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloM6"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt6"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloY7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="Y =  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt7"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloY7"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt7"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloM8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="M=  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt8"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloM8"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt8"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloY9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="Y =  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt9"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloY9"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt9"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloM10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="M=  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt10"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloM10"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/subTitulo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recuerde ingresar los valores en el orden que le dio a la estructura"
+        android:layout_above="@+id/LayoutBotones"
+        android:fontFamily="casual"
+        android:textSize="15sp"
+        android:textColor="@color/Titulo"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        />
+
+    <RelativeLayout
+        android:id="@+id/LayoutBotones"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/atras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Atras"
+            android:textAllCaps="false"
+            android:fontFamily="casual"
+            android:textSize="22sp"
+            android:onClick="onClick"
+            />
+        <Button
+            android:id="@+id/siguiente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Siguiente"
+            android:textAllCaps="false"
+            android:fontFamily="casual"
+            android:textSize="22sp"
+            android:onClick="onClick"
+            />
+        ></RelativeLayout>
+
+</RelativeLayout>

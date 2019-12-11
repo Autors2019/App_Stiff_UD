@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_viga_define_force"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/fondo"
+    tools:context=".viga.VigaDefineForceVector">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"/>
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:fontFamily="casual"
+        android:text="Viga"
+        android:textColor="@color/Titulo"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titulo">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/subTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Indique el vector de fuerzas de empotramiento para cada elemento"
+                android:fontFamily="casual"
+                android:textSize="20sp"
+                android:textColor="@color/Titulo"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/elementos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subTitulo"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="casual"
+                android:text="Elemento n"
+                android:textColor="@color/Titulo"
+                android:textSize="22sp"
+                />
+
+            <RelativeLayout
+                android:id="@+id/layoutVector4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutVector3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/entradaVector4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:hint="0"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@id/subTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/entradaVector4"
+                    android:fontFamily="casual"
+                    android:text="kN"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutVector1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/elementos"
+                android:layout_marginTop="5sp"
+                android:layout_centerHorizontal="true">
+
+                <EditText
+                    android:id="@+id/entradaVector1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:hint="0"
+                    />
+                <TextView
+                    android:id="@id/subTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/entradaVector1"
+                    android:text="kN"
+                    android:textSize="22sp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="casual"
+                    android:textColor="@color/Titulo"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/layoutVector2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutVector1"
+                android:layout_marginTop="5sp"
+                android:layout_centerHorizontal="true">
+
+                <EditText
+                    android:id="@+id/entradaVector2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:hint="0"
+                    />
+                <TextView
+                    android:id="@id/subTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/entradaVector2"
+                    android:text="kN"
+                    android:textSize="22sp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="casual"
+                    android:textColor="@color/Titulo"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/layoutVector3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutVector2"
+                android:layout_marginTop="5sp"
+                android:layout_centerHorizontal="true">
+
+                <EditText
+                    android:id="@+id/entradaVector3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:hint="0"
+                    />
+                <TextView
+                    android:id="@id/subTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/entradaVector3"
+                    android:text="kN"
+                    android:textSize="22sp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="casual"
+                    android:textColor="@color/Titulo"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/guardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutVector4"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="true"
+                android:text="Guardar"
+                android:textSize="22sp"
+                android:textAllCaps="false"
+                android:fontFamily="casual"
+                android:onClick="onClick"
+                />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/guardar"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/atras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="Atras"
+                    android:textAllCaps="false"
+                    android:fontFamily="casual"
+                    android:textSize="22sp"
+                    android:onClick="onClick"
+                    />
+                <Button
+                    android:id="@+id/siguiente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Siguiente"
+                    android:textAllCaps="false"
+                    android:fontFamily="casual"
+                    android:textSize="22sp"
+                    android:onClick="onClick"
+                    />
+                ></RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

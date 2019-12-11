@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_elements"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/fondo"
+    tools:context=".viga.VigaElementsActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_marginTop="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"/>
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:fontFamily="casual"
+        android:text="Viga"
+        android:textColor="@color/Titulo"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/logo">
+        <RelativeLayout
+            android:id="@+id/subRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/subTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Elementos que componen la viga"
+                android:fontFamily="casual"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:textColor="@color/Titulo"
+                android:textStyle="bold"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/layoutContenedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="40dp"
+                android:orientation="vertical"
+                android:layout_below="@+id/subTitulo">
+
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/dosElementos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="70dp"
+                        android:fontFamily="casual"
+                        android:text="Dos"
+                        android:textSize="25sp"
+                        android:checked="true"
+                        android:buttonTint="@color/Titulo"
+                        />
+                    <RadioButton
+                        android:id="@+id/tresElementos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25sp"
+                        android:fontFamily="casual"
+                        android:text="Tres"
+                        android:textSize="25sp"
+                        android:buttonTint="@color/Titulo"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/cuatroElementos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="casual"
+                        android:text="Cuatro"
+                        android:textSize="25sp"
+                        android:buttonTint="@color/Titulo"
+                        />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/atras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutContenedor"
+                android:layout_marginTop="90dp"
+                android:text="Atras"
+                android:textAllCaps="false"
+                android:fontFamily="casual"
+                android:textSize="25sp"
+                android:onClick="onClick"
+                />
+
+            <Button
+                android:id="@+id/siguiente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutContenedor"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="90dp"
+                android:fontFamily="casual"
+                android:onClick="onClick"
+                android:text="Siguiente"
+                android:textAllCaps="false"
+                android:textSize="25sp" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

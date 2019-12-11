@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/fondo"
+    tools:context=".SelectorActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="190dp"
+                android:layout_height="166dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="109dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="112dp"
+                app:srcCompat="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:fontFamily="casual"
+                android:text="Estructura a analizar"
+                android:textColor="@color/Titulo"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/viga"
+                android:layout_width="200dp"
+                android:layout_height="65dp"
+                android:layout_below="@+id/text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:fontFamily="casual"
+                android:text="Viga"
+                android:textAllCaps="false"
+                android:textSize="25sp"
+                android:onClick="onClick"
+                />
+
+            <Button
+                android:id="@+id/portico"
+                android:layout_width="200dp"
+                android:layout_height="65dp"
+                android:layout_below="@+id/viga"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:text="Pórtico Plano"
+                android:textAllCaps="false"
+                android:fontFamily="casual"
+                android:textSize="25sp"
+                android:onClick="onClick"/>
+            <Button
+                android:id="@+id/cercha"
+                android:layout_width="200dp"
+                android:layout_height="65dp"
+                android:layout_below="@+id/portico"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:text="Cercha"
+                android:textAllCaps="false"
+                android:fontFamily="casual"
+                android:textSize="25sp"
+                android:onClick="onClick"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
