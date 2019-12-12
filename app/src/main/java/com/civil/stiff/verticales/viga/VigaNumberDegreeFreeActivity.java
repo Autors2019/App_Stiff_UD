@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.civil.stiff.R;
 import com.civil.stiff.TemplatePDF;
+import com.civil.stiff.verticales.trasversales.InterfaceMatrixOrden;
 import com.civil.stiff.verticales.viga.algoritmoviga.SolveViga;
 import com.civil.stiff.verticales.viga.algoritmoviga.matrix.RegidityMatrix;
 
@@ -29,7 +30,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 
-public class VigaNumberDegreeFreeActivity extends AppCompatActivity {
+public class VigaNumberDegreeFreeActivity extends AppCompatActivity implements InterfaceMatrixOrden {
 
     //
     private ArrayList<SimpleMatrix> vectoresFuerzasInternas= null;
@@ -85,39 +86,6 @@ public class VigaNumberDegreeFreeActivity extends AppCompatActivity {
         layoutParametrosSpinners.topMargin=45;
     }
 
-    private ArrayList<String> numeroGradosLibertad(ArrayList<Integer[]> arrayOrdenElementos){
-
-        switch (arrayOrdenElementos.size()){
-            case 2:  numeroElmentosSpinner.add(0, "V1");
-                numeroElmentosSpinner.add(1, "θ1");
-                numeroElmentosSpinner.add(2, "V2");
-                numeroElmentosSpinner.add(3, "θ2");
-                numeroElmentosSpinner.add(4, "V3");
-                numeroElmentosSpinner.add(5, "θ3");
-                break;
-            case 3:  numeroElmentosSpinner.add(0, "V1");
-                numeroElmentosSpinner.add(1, "θ1");
-                numeroElmentosSpinner.add(2, "V2");
-                numeroElmentosSpinner.add(3, "θ");
-                numeroElmentosSpinner.add(4, "V3");
-                numeroElmentosSpinner.add(5, "θ3");
-                numeroElmentosSpinner.add(6, "V4");
-                numeroElmentosSpinner.add(7, "θ4");
-                break;
-            case 4:  numeroElmentosSpinner.add(0, "V1");
-                numeroElmentosSpinner.add(1, "θ1");
-                numeroElmentosSpinner.add(2, "V2");
-                numeroElmentosSpinner.add(3, "θ2");
-                numeroElmentosSpinner.add(4, "V3");
-                numeroElmentosSpinner.add(5, "θ3");
-                numeroElmentosSpinner.add(6, "V4");
-                numeroElmentosSpinner.add(7, "θ4");
-                numeroElmentosSpinner.add(8, "V5");
-                numeroElmentosSpinner.add(9, "θ5");
-                break;
-        }
-        return numeroElmentosSpinner;
-    }
     private void agregarGradosLibertad(ArrayList<Integer[]> arrayOrdenElementos){
         int numeroGL=0;
 
@@ -155,16 +123,7 @@ public class VigaNumberDegreeFreeActivity extends AppCompatActivity {
         }
         else gradosLibertad=gradosLibertad;
     }
-    private boolean validador(){
-        boolean status= false;
-        Set<Integer> listaNoDuplicados= new TreeSet<>();
-        for(int i=0; i< spinners.size(); i++){
-            listaNoDuplicados.add(spinners.get(i).getSelectedItemPosition());
-        }
-        if( listaNoDuplicados.size() == spinners.size()) status= true;
-        else status= false;
-        return status;
-    }
+
     private void calcularVectoresGradosLibertad() {
         a= new ArrayList<>();
         int longitud=0;
@@ -284,7 +243,7 @@ public class VigaNumberDegreeFreeActivity extends AppCompatActivity {
 
     private void calcularViga(){
         b = new ArrayList<>();
-        if(validador()) {
+        if(validadorSpinners(spinners)) {
             for (int i = 0; i < spinners.size(); i++) {
                 b.add(i, spinners.get(i).getSelectedItemPosition());
             }
