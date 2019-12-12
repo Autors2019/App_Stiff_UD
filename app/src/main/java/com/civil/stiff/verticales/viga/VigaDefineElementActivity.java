@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.civil.stiff.verticales.trasversales.InterfaceElementos;
+import com.civil.stiff.verticales.trasversales.InterfaceValidadores;
 import com.civil.stiff.verticales.trasversales.UnidadesLongitud;
 import com.civil.stiff.verticales.trasversales.UnidadesPresion;
 import com.civil.stiff.verticales.viga.algoritmoviga.matrix.RegidityMatrix;
@@ -26,7 +27,7 @@ import java.util.ArrayList;
 
 
 
-public class VigaDefineElementActivity extends AppCompatActivity implements InterfaceElementos {
+public class VigaDefineElementActivity extends AppCompatActivity implements InterfaceElementos, InterfaceValidadores {
 
     private int numeroElementos;
     private EditText tBase=null;

@@ -61,7 +61,6 @@
                 android:layout_below="@+id/subTitulo1"
                 android:fontFamily="casual"
                 android:textColor="@color/Titulo"
-                android:textStyle="bold"
                 android:textAlignment="center"
                 android:textSize="22sp"
                 android:text="Elemento n"

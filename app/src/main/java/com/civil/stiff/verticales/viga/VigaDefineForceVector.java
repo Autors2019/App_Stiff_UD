@@ -11,6 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.civil.stiff.R;
+import com.civil.stiff.verticales.trasversales.InterfaceElementos;
+import com.civil.stiff.verticales.trasversales.InterfaceValidadores;
 import com.civil.stiff.verticales.viga.algoritmoviga.matrix.IndexMatrix;
 import com.civil.stiff.verticales.viga.algoritmoviga.matrix.RegidityMatrix;
 
@@ -18,7 +20,7 @@ import org.ejml.simple.SimpleMatrix;
 
 import java.util.ArrayList;
 
-public class VigaDefineForceVector extends AppCompatActivity {
+public class VigaDefineForceVector extends AppCompatActivity implements InterfaceElementos, InterfaceValidadores {
     private ArrayList<Integer[]> arrayOrdenElementos=null;
     private ArrayList<RegidityMatrix> regidityMatrices = null;
     private EditText eVectorFuerza1;
@@ -92,17 +94,10 @@ public class VigaDefineForceVector extends AppCompatActivity {
         return k;
     }
 
-    private boolean validadorCampo(EditText editText) {
-        String campo= editText.getText().toString();
-        boolean campoValido= false ;
-        if(campo.matches("")|| campo.equals(".")) campoValido = false;
-        else  campoValido=true;
-        return  campoValido;
-    }
 
     public void guardar(int numeroElementos, EditText eVectorFuerza1, EditText eVectorFuerza2, EditText eVectorFuerza3, EditText eVectorFuerza4, ArrayList<SimpleMatrix> vectoresFuerzas ){
 
-        if( validadorCampo(eVectorFuerza1) && validadorCampo(eVectorFuerza2) && validadorCampo(eVectorFuerza3) && validadorCampo(eVectorFuerza4)){
+        if( validarCampoCC(eVectorFuerza1) && validarCampoCC(eVectorFuerza2) && validarCampoCC(eVectorFuerza3) && validarCampoCC(eVectorFuerza4)){
             vectorFuerza= new SimpleMatrix(4,1);
             vectorFuerza.set(0,0,Double.parseDouble(eVectorFuerza1.getText().toString()));
             vectorFuerza.set(1,0,Double.parseDouble(eVectorFuerza2.getText().toString()));

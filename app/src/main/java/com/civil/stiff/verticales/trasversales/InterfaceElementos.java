@@ -4,43 +4,6 @@ import android.widget.EditText;
 
 public interface InterfaceElementos {
 
-    // Metodo para validar campo
-    default boolean validarCampo(EditText editText){
-        String text= editText.getText().toString();
-        boolean estadoCampo=false;
-        double numero=0.0;
-        // Estado del campo
-        if(text.matches("")){
-            estadoCampo=false;
-        }
-        else{
-            numero= Double.parseDouble(text);
-            //Campo diferente a cero
-            if(numero!=0.0){
-                estadoCampo=true;
-            }
-            else{
-                estadoCampo=false;
-            }
-        }
-        return  estadoCampo;
-    }
-    // Metodo para validar angulo
-    default boolean validarCampoAngulo(EditText editText){
-        String text= editText.getText().toString();
-        boolean estadoCampo=false;
-        double numero=0.0;
-        // Estado del campo
-        if(text.matches("")){
-            estadoCampo=false;
-        }
-        else{
-            numero= Double.parseDouble(text);
-            //Campo diferente a cero
-            estadoCampo=true;
-        }
-        return  estadoCampo;
-    }
     // Metodo para  normalizar unidades
     default double  normalizarUnidadLonitud(UnidadesLongitud unidadesLongitud, double valor){
 

@@ -1,9 +1,292 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/fondo"
+    android:padding="15dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".verticales.portico.PorticoDefineForceVectorActivity">
+    <!--Header-->
+    <RelativeLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logo"
+            android:layout_alignParentLeft="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="casual"
+            android:textColor="@color/Titulo"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:text="Pórtico plano"
+            />
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/botones"
+        android:layout_below="@+id/layoutHeader">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--subTitulos-->
+            <TextView
+                android:id="@+id/subTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:textSize="22sp"
+                android:textColor="@color/Titulo"
+                android:textAlignment="center"
+                android:text="Indique el vector de fuerzas de empotramiento para cada elemento"
+                />
+            <TextView
+                android:id="@+id/numeroElemento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subTitulo"
+                android:fontFamily="casual"
+                android:textSize="22sp"
+                android:textColor="@color/Titulo"
+                android:textAlignment="center"
+                android:text="Elemento n"
+                />
+            <!--Edit text-->
+            <RelativeLayout
+                android:id="@+id/layoutContenedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/numeroElemento"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true">
+                <RelativeLayout
+                    android:id="@+id/layoutVector1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp">
+                    <EditText
+                        android:id="@+id/entradaVector1"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="casual"
+                        android:hint="0"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:textColor="@color/Titulo"
+                        android:textSize="22sp" />
+                    <TextView
+                        android:id="@id/subTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/entradaVector1"
+                        android:fontFamily="casual"
+                        android:text="kN"
+                        android:textColor="@color/Titulo"
+                        android:textSize="22sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/layoutVector2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutVector1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp">
+                    <EditText
+                        android:id="@+id/entradaVector2"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="casual"
+                        android:hint="0"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:textColor="@color/Titulo"
+                        android:textSize="22sp" />
+                    <TextView
+                        android:id="@id/subTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/entradaVector2"
+                        android:fontFamily="casual"
+                        android:text="kN"
+                        android:textColor="@color/Titulo"
+                        android:textSize="22sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/layoutVector3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutVector2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp">
+                    <EditText
+                        android:id="@+id/entradaVector3"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="casual"
+                        android:hint="0"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:textColor="@color/Titulo"
+                        android:textSize="22sp" />
+                    <TextView
+                        android:id="@id/subTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/entradaVector3"
+                        android:fontFamily="casual"
+                        android:text="kN"
+                        android:textColor="@color/Titulo"
+                        android:textSize="22sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/layoutVector4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutVector3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp">
+                    <EditText
+                        android:id="@+id/entradaVector4"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="casual"
+                        android:hint="0"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:textColor="@color/Titulo"
+                        android:textSize="22sp" />
+                    <TextView
+                        android:id="@id/subTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/entradaVector4"
+                        android:fontFamily="casual"
+                        android:text="kN"
+                        android:textColor="@color/Titulo"
+                        android:textSize="22sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/layoutVector5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutVector4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp">
+                    <EditText
+                        android:id="@+id/entradaVector5"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="casual"
+                        android:hint="0"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:textColor="@color/Titulo"
+                        android:textSize="22sp" />
+                    <TextView
+                        android:id="@id/subTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/entradaVector5"
+                        android:fontFamily="casual"
+                        android:text="kN"
+                        android:textColor="@color/Titulo"
+                        android:textSize="22sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/layoutVector6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutVector5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp">
+                    <EditText
+                        android:id="@+id/entradaVector6"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="casual"
+                        android:hint="0"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:textColor="@color/Titulo"
+                        android:textSize="22sp" />
+                    <TextView
+                        android:id="@id/subTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/entradaVector6"
+                        android:fontFamily="casual"
+                        android:text="kN"
+                        android:textColor="@color/Titulo"
+                        android:textSize="22sp" />
+                </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+            <Button
+                android:id="@+id/bGuardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutContenedor"
+                android:layout_alignParentEnd="true"
+                android:textAllCaps="false"
+                android:fontFamily="casual"
+                android:textSize="22sp"
+                android:text="Guardar"
+                android:onClick="onClick"
+                />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <!--Botones-->
+    <RelativeLayout
+        android:id="@+id/botones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        >
+        <Button
+            android:id="@+id/bAtras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textAllCaps="false"
+            android:fontFamily="casual"
+            android:textColor="@color/Titulo"
+            android:textSize="22sp"
+            android:text="Atras"
+            android:onClick="onClick"
+            />
+        <Button
+            android:id="@+id/bSiguiente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textAllCaps="false"
+            android:fontFamily="casual"
+            android:textColor="@color/Titulo"
+            android:textSize="22sp"
+            android:text="Siguiente"
+            android:onClick="onClick"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

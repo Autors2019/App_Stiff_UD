@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 
 import com.civil.stiff.verticales.portico.algoritmoportico.matrix.RegidityMatrixPortico;
+import com.civil.stiff.verticales.trasversales.InterfaceValidadores;
 import com.civil.stiff.verticales.trasversales.UnidadesLongitud;
 import com.civil.stiff.verticales.trasversales.UnidadesPresion;
 import com.civil.stiff.R;
@@ -24,7 +25,7 @@ import com.civil.stiff.verticales.trasversales.InterfaceElementos;
 
 import java.util.ArrayList;
 
-public class PorticoDefineElementActivity extends AppCompatActivity  implements InterfaceElementos {
+public class PorticoDefineElementActivity extends AppCompatActivity  implements InterfaceElementos, InterfaceValidadores {
     private int numElementos;
     // rerencias vistas
     private TextView tvNumElementos;
@@ -163,7 +164,7 @@ public class PorticoDefineElementActivity extends AppCompatActivity  implements 
     private void guardarMatrix( EditText eTBase, EditText eTAltura, EditText eTLongitud, EditText eTElasticidad,  EditText eTAngulo, int numeroElementos,ArrayList<RegidityMatrixPortico> regidityMatrixPorticos){
 
 
-        if((validarCampo(eTBase)&& validarCampo(eTAltura) && validarCampo(eTLongitud)&& validarCampo(eTElasticidad) && validarCampoAngulo(etAngulo))){
+        if((validarCampo(eTBase)&& validarCampo(eTAltura) && validarCampo(eTLongitud)&& validarCampo(eTElasticidad) && validarCampoCC(etAngulo))){
 
             regidityMatrixPorticos.add((indexMatrix-1), new RegidityMatrixPortico(normalizarUnidadLonitud(unidadBase,Double.parseDouble(eTBase.getText().toString())),
                     normalizarUnidadLonitud(unidadAltura,Double.parseDouble(eTAltura.getText().toString())),
