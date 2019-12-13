@@ -4,6 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.civil.stiff.R;
 import com.civil.stiff.verticales.portico.algoritmoportico.matrix.RegidityMatrixPortico;
@@ -12,7 +18,7 @@ import org.ejml.simple.SimpleMatrix;
 
 import java.util.ArrayList;
 
-public class PorticoNumberDegreeFreeActivity extends AppCompatActivity {
+public class PorticoNumberDegreeFreeActivity extends AppCompatActivity  implements InterfaceNumGradLibPortico {
     // Objetos recibidos
     private int numElementos;
     private ArrayList<RegidityMatrixPortico> regidityMatrixPorticos;
@@ -21,10 +27,33 @@ public class PorticoNumberDegreeFreeActivity extends AppCompatActivity {
     private SimpleMatrix matrizConsolidada;
     private SimpleMatrix vectorFuerzasExt;
     private SimpleMatrix vectorConsolidado;
+    // Referecias vistas
+    private TextView tVGradosLibertad;
+    private LinearLayout layoutSpinnerGradosLibertad;
+    private ArrayList<Spinner> spinners;
+    private ArrayAdapter<CharSequence> adaptadorSpinner;
+    private LinearLayout.LayoutParams    layoutParametrosSpinners;
+    // Variables atributo
+    private int gradosLibertad;
+    private ArrayList<String> numeroElmentosSpinner;
+    private ArrayList<Integer> a;
+    private ArrayList<Integer> b;
+    // numero de grados de libretad max.
+    private final int NUMGRALIBERMAX=4;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_portico_number_degree_free);
+        // Instancias de vistas
+        tVGradosLibertad= findViewById(R.id.textViewNumeroGrados);
+        tVGradosLibertad.setText("n="+gradosLibertad);
+        layoutSpinnerGradosLibertad= findViewById(R.id.layoutSpinnerNumeroGrados);
+        // Intancias variables atributo
+        numeroElmentosSpinner= new ArrayList<>();
+        spinners= new ArrayList<>();
+
         Bundle bundle= getIntent().getExtras();
         if(bundle!=null){
             numElementos= bundle.getInt("numeroElementos");
@@ -38,6 +67,50 @@ public class PorticoNumberDegreeFreeActivity extends AppCompatActivity {
             Log.i("vectorFuerzasExt",vectorFuerzasExt.toString());
             // Log vectorFuerzasExt
             Log.i("vectorConsolidado",vectorConsolidado.toString());
+        }
+
+        // Spinner´s
+        adaptadorSpinner= new ArrayAdapter(this, android.R.layout.simple_spinner_item, numeroGradosLibertad(numElementos));
+        layoutParametrosSpinners = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT);
+        layoutParametrosSpinners.topMargin=45;
+    }
+
+    // agregar grados de libertad
+    private void agregarGradosLibertad(){
+        if(gradosLibertad<NUMGRALIBERMAX){
+            spinners.add(gradosLibertad, new Spinner(this));
+            spinners.get(gradosLibertad).setAdapter(adaptadorSpinner);
+            layoutSpinnerGradosLibertad.addView(spinners.get(gradosLibertad), gradosLibertad, layoutParametrosSpinners );
+            gradosLibertad++;
+            tVGradosLibertad.setText("n="+gradosLibertad);
+        }
+        else {
+            gradosLibertad=gradosLibertad;
+            Toast.makeText(this,"No se permiten mas grados de libertad", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    // quitar grados de libertad
+    private void quitarGradosLibertad(){
+        if(gradosLibertad>1){
+            gradosLibertad--;
+            layoutSpinnerGradosLibertad.removeViewAt(gradosLibertad);
+            spinners.remove(gradosLibertad);
+            tVGradosLibertad.setText("n="+gradosLibertad);
+        }
+        else gradosLibertad=gradosLibertad;
+    }
+
+    public void onClick(View view){
+        switch (view.getId()){
+            case R.id.bAtras: finish();
+                break;
+            case R.id.botonRestar: quitarGradosLibertad();
+                break;
+            case R.id.botonSumar: agregarGradosLibertad();
+                break;
+            case R.id.bCalcular:
+                break;
         }
     }
 }

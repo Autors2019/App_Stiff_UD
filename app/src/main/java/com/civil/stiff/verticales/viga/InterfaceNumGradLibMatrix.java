@@ -1,12 +1,11 @@
-package com.civil.stiff.verticales.trasversales;
+package com.civil.stiff.verticales.viga;
 
-import android.widget.Spinner;
+
 
 import java.util.ArrayList;
-import java.util.Set;
-import java.util.TreeSet;
 
-public interface InterfaceMatrixOrden {
+
+public interface InterfaceNumGradLibMatrix {
     default ArrayList<String> numeroGradosLibertad( ArrayList<Integer[]> arrayOrdenElementos) {
         ArrayList<String> numeroElmentosSpinner= new ArrayList<>();
         switch (arrayOrdenElementos.size()) {

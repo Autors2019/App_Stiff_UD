@@ -7,9 +7,9 @@ package com.civil.stiff.verticales.viga.algoritmoviga;
 import android.util.Log;
 
 import com.civil.stiff.verticales.viga.algoritmoviga.matrix.RegidityMatrix;
-import com.civil.stiff.verticales.viga.algoritmoviga.matrix.SubMatrix;
+import com.civil.stiff.verticales.trasversales.SubMatrix;
 import com.civil.stiff.verticales.trasversales.IndexVector;
-import com.civil.stiff.verticales.viga.algoritmoviga.vector.SubVector;
+import com.civil.stiff.verticales.trasversales.SubVector;
 
 import org.ejml.data.SingularMatrixException;
 import org.ejml.simple.SimpleMatrix;
@@ -107,7 +107,7 @@ public final class SolveViga  {
         return D_b;
     }
 
-    public SimpleMatrix getP_a() {
+    public SimpleMatrix getF_a() {
         return P_a;
     }
 

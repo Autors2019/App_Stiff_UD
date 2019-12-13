@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import com.civil.stiff.R;
 import com.civil.stiff.TemplatePDF;
-import com.civil.stiff.verticales.trasversales.InterfaceMatrixOrden;
 import com.civil.stiff.verticales.trasversales.InterfaceValidadores;
 import com.civil.stiff.verticales.viga.algoritmoviga.SolveViga;
 import com.civil.stiff.verticales.viga.algoritmoviga.matrix.RegidityMatrix;
@@ -27,11 +26,9 @@ import java.util.ArrayList;
 
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Set;
-import java.util.TreeSet;
 
 
-public class VigaNumberDegreeFreeActivity extends AppCompatActivity implements InterfaceMatrixOrden, InterfaceValidadores {
+public class VigaNumberDegreeFreeActivity extends AppCompatActivity implements InterfaceNumGradLibMatrix, InterfaceValidadores {
 
     //
     private ArrayList<SimpleMatrix> vectoresFuerzasInternas= null;
@@ -231,7 +228,7 @@ public class VigaNumberDegreeFreeActivity extends AppCompatActivity implements I
         templatePDF.createMatrix(castOrdenElementos(b.toArray(new Integer[b.size()])),solveViga.getD_b(), 100);
         // Imprimir Reacciones
         templatePDF.addParagraph("Reacciones: ");
-        templatePDF.createMatrix(castReaccionesElementos(a.toArray(new Integer[a.size()])),solveViga.getP_a(), 100);
+        templatePDF.createMatrix(castReaccionesElementos(a.toArray(new Integer[a.size()])),solveViga.getF_a(), 100);
         // Fuezas internas
         templatePDF.addParagraph("Fuerzas Internas: ");
         for(int i=0; i< solveViga.getReacciIntP().size(); i++){
