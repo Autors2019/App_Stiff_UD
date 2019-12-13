@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.civil.stiff.R;
-import com.civil.stiff.verticales.portico.algoritmoportico.matrix.ConsolidatedMatrix;
+import com.civil.stiff.verticales.portico.algoritmoportico.matrix.ConsolidatedMatrixPortico;
 import com.civil.stiff.verticales.portico.algoritmoportico.matrix.RegidityMatrixPortico;
 import com.civil.stiff.verticales.trasversales.InterfaceValidadores;
 
@@ -73,7 +73,7 @@ public class PorticoDefineForceVectorActivity extends AppCompatActivity implemen
             }
             // Calcular matriz consolidada
             try {
-                matrizConsolidada= ConsolidatedMatrix.calculate(numElementos,ordenElementos,regidityMatrixPorticos);
+                matrizConsolidada= ConsolidatedMatrixPortico.calculate(numElementos,ordenElementos,regidityMatrixPorticos);
             }
             catch (Exception e){
                 Log.e( "matrizConsolidada: ", e.toString());

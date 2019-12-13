@@ -8,7 +8,7 @@ import org.ejml.simple.SimpleMatrix;
 
 import java.util.ArrayList;
 
-public class ConsolidatedMatrix {
+public class ConsolidatedMatrixPortico {
 
     public static SimpleMatrix calculate(int numeroElementos, ArrayList<Integer[]> ordenElementos, ArrayList<RegidityMatrixPortico> regidityMatrixPorticos ) throws Exception{
         // SimpleMatrix

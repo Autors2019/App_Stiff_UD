@@ -1,6 +1,6 @@
 package com.civil.stiff.verticales.trasversales;
 
-import android.widget.EditText;
+
 
 public interface InterfaceElementos {
 

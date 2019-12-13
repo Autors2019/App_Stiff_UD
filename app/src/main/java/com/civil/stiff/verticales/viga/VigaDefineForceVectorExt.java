@@ -12,8 +12,9 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.civil.stiff.R;
+import com.civil.stiff.verticales.trasversales.InterfaceValidadores;
 import com.civil.stiff.verticales.viga.algoritmoviga.matrix.RegidityMatrix;
-import com.civil.stiff.verticales.viga.algoritmoviga.vector.IndexVector;
+import com.civil.stiff.verticales.trasversales.IndexVector;
 
 
 import org.ejml.simple.SimpleMatrix;
@@ -22,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class VigaDefineForceVectorExt extends AppCompatActivity {
+public class VigaDefineForceVectorExt extends AppCompatActivity implements InterfaceValidadores {
 
     private RelativeLayout layoutContenedorVectores;
     private RelativeLayout layoutContenedorVector1;
@@ -157,19 +158,13 @@ public class VigaDefineForceVectorExt extends AppCompatActivity {
         }
     }
 
-    private boolean validadorCampo(EditText editText) {
-        String campo= editText.getText().toString();
-        boolean campoValido= false ;
-        if(campo.matches("")|| campo.equals(".")) campoValido = false;
-        else  campoValido=true;
-        return  campoValido;
-    }
+
 
     private boolean siguiente(){
         boolean siguienteActividad= false;
         boolean estadoValidacion= true;
         for(EditText et: eTVectores){
-            estadoValidacion= validadorCampo(et) && estadoValidacion;
+            estadoValidacion= validarCampoCC(et) && estadoValidacion;
         }
 
         if(estadoValidacion){

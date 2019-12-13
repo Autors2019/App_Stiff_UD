@@ -6,9 +6,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.*;
-
-public class ConsolidatedMatrixTest {
+public class ConsolidatedMatrixPorticoTest {
     int numeroElementos;
     ArrayList<Integer[]> ordenElementos;
     ArrayList<RegidityMatrixPortico> regidityMatrixPorticos;
@@ -29,7 +27,7 @@ public class ConsolidatedMatrixTest {
     public void calculate() {
         regidityMatrixPorticos.forEach(s->s.calculate().print());
         try {
-            SimpleMatrix k = ConsolidatedMatrix.calculate(numeroElementos, ordenElementos, regidityMatrixPorticos);
+            SimpleMatrix k = ConsolidatedMatrixPortico.calculate(numeroElementos, ordenElementos, regidityMatrixPorticos);
             k.print();
         }
         catch (Exception e){

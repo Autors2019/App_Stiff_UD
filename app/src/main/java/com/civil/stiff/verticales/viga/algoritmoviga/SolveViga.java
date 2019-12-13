@@ -8,7 +8,7 @@ import android.util.Log;
 
 import com.civil.stiff.verticales.viga.algoritmoviga.matrix.RegidityMatrix;
 import com.civil.stiff.verticales.viga.algoritmoviga.matrix.SubMatrix;
-import com.civil.stiff.verticales.viga.algoritmoviga.vector.IndexVector;
+import com.civil.stiff.verticales.trasversales.IndexVector;
 import com.civil.stiff.verticales.viga.algoritmoviga.vector.SubVector;
 
 import org.ejml.data.SingularMatrixException;
