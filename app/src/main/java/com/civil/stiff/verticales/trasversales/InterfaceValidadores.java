@@ -1,6 +1,11 @@
 package com.civil.stiff.verticales.trasversales;
 
 import android.widget.EditText;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.TreeSet;
 
 public interface InterfaceValidadores {
     // Metodo para validar campo
@@ -36,5 +41,16 @@ public interface InterfaceValidadores {
             estadoCampo=true;
         }
         return  estadoCampo;
+    }
+    // Validador spinner
+    default boolean validadorSpinners(ArrayList<Spinner> spinners){
+        boolean status= false;
+        Set<Integer> listaNoDuplicados= new TreeSet<>();
+        for(int i=0; i< spinners.size(); i++){
+            listaNoDuplicados.add(spinners.get(i).getSelectedItemPosition());
+        }
+        if( listaNoDuplicados.size() == spinners.size()) status= true;
+        else status= false;
+        return status;
     }
 }

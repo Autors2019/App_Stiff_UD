@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.civil.stiff.R;
+import com.civil.stiff.verticales.portico.algoritmoportico.matrix.ConsolidatedMatrix;
 import com.civil.stiff.verticales.portico.algoritmoportico.matrix.RegidityMatrixPortico;
 import com.civil.stiff.verticales.trasversales.InterfaceValidadores;
 
@@ -38,7 +39,7 @@ public class PorticoDefineForceVectorActivity extends AppCompatActivity implemen
     private ArrayList<SimpleMatrix> vectoresFuerzasInt;
     private SimpleMatrix vectorFuerza;
     private int indexElemento=1;
-
+    private SimpleMatrix matrizConsolidada;
 
 
     @Override
@@ -64,11 +65,20 @@ public class PorticoDefineForceVectorActivity extends AppCompatActivity implemen
             numElementos = bundle.getInt("numeroElementos");
             regidityMatrixPorticos = (ArrayList<RegidityMatrixPortico>) bundle.getSerializable("regidityMatrixPorticos");
             ordenElementos = (ArrayList<Integer[]>) bundle.getSerializable("ordenElementos");
+            // Log orden de  elementos
             for (Integer[] vector : ordenElementos) {
                 for (int i : vector) {
                     Log.i("ordenElementos= ", Integer.toString(i));
                 }
             }
+            // Calcular matriz consolidada
+            try {
+                matrizConsolidada= ConsolidatedMatrix.calculate(numElementos,ordenElementos,regidityMatrixPorticos);
+            }
+            catch (Exception e){
+                Log.e( "matrizConsolidada: ", e.toString());
+            }
+
         }
     }
 
@@ -127,6 +137,7 @@ public class PorticoDefineForceVectorActivity extends AppCompatActivity implemen
                 bundle.putSerializable("regidityMatrixPorticos",regidityMatrixPorticos);
                 bundle.putSerializable("ordenElementos", ordenElementos);
                 bundle.putSerializable("vectoresFuerzasInt", vectoresFuerzasInt);
+                bundle.putSerializable("matrizConsolidada",matrizConsolidada);
                 intent.putExtras(bundle);
                 startActivity(intent);
                 break;

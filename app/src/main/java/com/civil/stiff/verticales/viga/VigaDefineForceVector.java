@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.civil.stiff.R;
 import com.civil.stiff.verticales.trasversales.InterfaceElementos;
 import com.civil.stiff.verticales.trasversales.InterfaceValidadores;
-import com.civil.stiff.verticales.viga.algoritmoviga.matrix.IndexMatrix;
+import com.civil.stiff.verticales.trasversales.IndexMatrix;
 import com.civil.stiff.verticales.viga.algoritmoviga.matrix.RegidityMatrix;
 
 import org.ejml.simple.SimpleMatrix;

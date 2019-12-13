@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.civil.stiff.R;
 import com.civil.stiff.verticales.portico.algoritmoportico.matrix.RegidityMatrixPortico;
@@ -19,6 +20,7 @@ public class PorticoDefineForceVectorExtActivity extends AppCompatActivity {
     private ArrayList<RegidityMatrixPortico> regidityMatrixPorticos;
     private ArrayList<Integer[]> ordenElementos;
     private ArrayList<SimpleMatrix> vectoresFuerzasInt;
+    private SimpleMatrix matrizConsolidada;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,11 +31,16 @@ public class PorticoDefineForceVectorExtActivity extends AppCompatActivity {
             regidityMatrixPorticos= ( ArrayList<RegidityMatrixPortico>) bundle.getSerializable("regidityMatrixPorticos");
             ordenElementos= (ArrayList<Integer[]>) bundle.getSerializable("ordenElementos");
             vectoresFuerzasInt= (ArrayList<SimpleMatrix>)bundle.getSerializable("vectoresFuerzasInt");
-            // Log
+            matrizConsolidada= (SimpleMatrix)bundle.getSerializable("matrizConsolidada");
+            // Log vectoresFuerzasInt
             for(SimpleMatrix i: vectoresFuerzasInt){
-                Log.i("PorticoDefineForceVectorExtActivity: vectoresFuerzasInt= ", i.toString());
+                Log.i("PorticoDefineForceVectorExtActivity: 1vectoresFuerzasInt= ", i.toString());
             }
+            // Log matrizConsolidada
+            Log.i("matrizConsolidada= ", matrizConsolidada.toString());
         }
+    }
+    public  void onClick(View view){
 
     }
 }

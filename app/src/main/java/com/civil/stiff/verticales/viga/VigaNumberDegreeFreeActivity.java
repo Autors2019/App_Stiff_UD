@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.civil.stiff.R;
 import com.civil.stiff.TemplatePDF;
 import com.civil.stiff.verticales.trasversales.InterfaceMatrixOrden;
+import com.civil.stiff.verticales.trasversales.InterfaceValidadores;
 import com.civil.stiff.verticales.viga.algoritmoviga.SolveViga;
 import com.civil.stiff.verticales.viga.algoritmoviga.matrix.RegidityMatrix;
 
@@ -30,7 +31,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 
-public class VigaNumberDegreeFreeActivity extends AppCompatActivity implements InterfaceMatrixOrden {
+public class VigaNumberDegreeFreeActivity extends AppCompatActivity implements InterfaceMatrixOrden, InterfaceValidadores {
 
     //
     private ArrayList<SimpleMatrix> vectoresFuerzasInternas= null;
