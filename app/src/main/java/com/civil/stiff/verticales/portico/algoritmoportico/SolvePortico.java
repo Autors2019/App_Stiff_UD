@@ -75,7 +75,7 @@ public class SolvePortico {
             //Calculo reaaciones
             reacciones.add(regidityMatrixPorticos.get(i).calculate().mult(MatrixTransformation.calculate(regidityMatrixPorticos.get(i).getAngulo())).mult(SubVector.calculate(orderElementosU, D)).plus(vectoresFuerzasInt.get(i)));
         }
-        Log.i("Viga: calculoIncognitas: reacciIntP=", reacciones.toString());
+        Log.i("Portico: calculoIncognitas: reacciIntP=", reacciones.toString());
 
     }
 

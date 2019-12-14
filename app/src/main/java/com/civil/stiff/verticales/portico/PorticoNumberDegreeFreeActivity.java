@@ -12,13 +12,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.civil.stiff.R;
+import com.civil.stiff.verticales.portico.algoritmoportico.CalVectA;
+import com.civil.stiff.verticales.portico.algoritmoportico.SolvePortico;
 import com.civil.stiff.verticales.portico.algoritmoportico.matrix.RegidityMatrixPortico;
+import com.civil.stiff.verticales.trasversales.InterfaceValidadores;
 
 import org.ejml.simple.SimpleMatrix;
 
 import java.util.ArrayList;
 
-public class PorticoNumberDegreeFreeActivity extends AppCompatActivity  implements InterfaceNumGradLibPortico {
+public class PorticoNumberDegreeFreeActivity extends AppCompatActivity  implements InterfaceNumGradLibPortico, InterfaceValidadores {
     // Objetos recibidos
     private int numElementos;
     private ArrayList<RegidityMatrixPortico> regidityMatrixPorticos;
@@ -37,7 +40,8 @@ public class PorticoNumberDegreeFreeActivity extends AppCompatActivity  implemen
     private int gradosLibertad;
     private ArrayList<String> numeroElmentosSpinner;
     private ArrayList<Integer> a;
-    private ArrayList<Integer> b;
+    private ArrayList<Integer> b= new ArrayList<>();
+    private SolvePortico solvePortico;
     // numero de grados de libretad max.
     private final int NUMGRALIBERMAX=4;
 
@@ -89,7 +93,6 @@ public class PorticoNumberDegreeFreeActivity extends AppCompatActivity  implemen
             Toast.makeText(this,"No se permiten mas grados de libertad", Toast.LENGTH_LONG).show();
         }
     }
-
     // quitar grados de libertad
     private void quitarGradosLibertad(){
         if(gradosLibertad>1){
@@ -101,6 +104,35 @@ public class PorticoNumberDegreeFreeActivity extends AppCompatActivity  implemen
         else gradosLibertad=gradosLibertad;
     }
 
+    private void calcularPortico(){
+        if(validadorSpinners(spinners)) {
+            // Caclcular  vector b
+            for (int i = 0; i < spinners.size(); i++) {
+                b.add(i, spinners.get(i).getSelectedItemPosition());
+            }
+            // Calcular vector a
+            a= CalVectA.calculate(numElementos,b);
+            //Log vectores a y b
+            a.forEach(s->Log.i("calculaPortico: Vector a= ", s.toString()));
+            b.forEach(s->Log.i("calcularPortico: Vector b= ", s.toString()));
+
+            // Solucionar Portico
+            try {
+                solvePortico= new SolvePortico(a,b,ordenElementos,vectoresFuerzasInt,vectorConsolidado,vectorFuerzasExt,regidityMatrixPorticos,matrizConsolidada);
+            }
+            catch (RuntimeException e){
+                Log.e("calcularPortico", e.toString());
+                Toast.makeText(this, "La operación a realizar contiene multiples soluciones, revise los datos ingresados" , Toast.LENGTH_LONG).show();
+            }
+
+        }
+        else{
+            Toast.makeText(this, "Uno o mas grados estan varias veces asignados", Toast.LENGTH_LONG).show();
+        }
+
+
+    }
+
     public void onClick(View view){
         switch (view.getId()){
             case R.id.bAtras: finish();
@@ -109,7 +141,7 @@ public class PorticoNumberDegreeFreeActivity extends AppCompatActivity  implemen
                 break;
             case R.id.botonSumar: agregarGradosLibertad();
                 break;
-            case R.id.bCalcular:
+            case R.id.bCalcular:  calcularPortico();
                 break;
         }
     }
