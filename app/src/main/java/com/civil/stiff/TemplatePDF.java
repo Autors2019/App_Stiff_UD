@@ -42,10 +42,10 @@ public class TemplatePDF {
     private Document document;
     private PdfWriter pdfWriter;
     private Paragraph  paragraph;
-    private Font fTitle= new Font(Font.FontFamily.TIMES_ROMAN, 20,Font.BOLD);
-    private Font fSubTitle= new Font(Font.FontFamily.TIMES_ROMAN, 18,Font.BOLD);
-    private Font fText= new Font(Font.FontFamily.TIMES_ROMAN, 12,Font.BOLD);
-    private Font fHighText= new Font(Font.FontFamily.TIMES_ROMAN, 15,Font.BOLD);
+    private Font fTitle= new Font(Font.FontFamily.TIMES_ROMAN, 25,Font.BOLD);
+    private Font fSubTitle= new Font(Font.FontFamily.TIMES_ROMAN, 20,Font.BOLD);
+    private Font fText= new Font(Font.FontFamily.TIMES_ROMAN, 18,Font.BOLD);
+    private Font fHighText= new Font(Font.FontFamily.TIMES_ROMAN, 18,Font.BOLD);
     private String fileName;
     private DecimalFormat sNotation= new DecimalFormat("00.###E0");
 
@@ -56,7 +56,7 @@ public class TemplatePDF {
     public void openDocument(){
         createFile();
         try{
-            document= new Document(PageSize.A4);
+            document= new Document(PageSize.A2);
 
             pdfWriter= PdfWriter.getInstance(document, new FileOutputStream(pdfFile));
             document.open();

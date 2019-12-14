@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/fondo"
     android:padding="15dp"
-    tools:context=".verticales.portico.PorticoMatrixOrderActivity">
+    tools:context=".estructuras.portico.PorticoMatrixOrderActivity">
     <!--Header-->
     <RelativeLayout
         android:id="@+id/layoutHeader"

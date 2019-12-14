@@ -41,11 +41,11 @@ public class ViewPDFActivity extends AppCompatActivity {
         finish();
     }
     public  void abrirPdf(View view){
-        File pdfFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath()+"/PDF"+"/viga.pdf");
-        Log.i("abrirPdf", pdfFile.getAbsolutePath());
+        /*File pdfFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath()+"/PDF"+"/viga.pdf");
+        Log.i("abrirPdf", pdfFile.getAbsolutePath());*/
 
-        if(pdfFile.exists()){
-            Uri uri= Uri.fromFile(pdfFile);
+        if(file.exists()){
+            Uri uri= Uri.fromFile(file);
             Intent intent= new Intent(Intent.ACTION_VIEW);
             intent.setDataAndType(uri, "application/pdf");
             try {

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="15dp"
     android:background="@color/fondo"
-    tools:context=".verticales.viga.VigaDefineForceVector">
+    tools:context=".estructuras.viga.VigaDefineForceVector">
     <ImageView
         android:id="@+id/logo"
         android:layout_width="100dp"

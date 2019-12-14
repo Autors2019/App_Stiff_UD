@@ -12,16 +12,16 @@
         android:roundIcon="@mipmap/stiff_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".verticales.portico.PorticoNumberDegreeFreeActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".verticales.portico.PorticoDefineForceVectorExtActivity" android:screenOrientation="portrait" />
-        <activity android:name=".verticales.portico.PorticoDefineForceVectorActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".verticales.portico.PorticoMatrixOrderActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".verticales.portico.PorticoDefineElementActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".verticales.portico.PorticoElementsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".estructuras.portico.PorticoNumberDegreeFreeActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".estructuras.portico.PorticoDefineForceVectorExtActivity" android:screenOrientation="portrait" />
+        <activity android:name=".estructuras.portico.PorticoDefineForceVectorActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".estructuras.portico.PorticoMatrixOrderActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".estructuras.portico.PorticoDefineElementActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".estructuras.portico.PorticoElementsActivity" android:screenOrientation="portrait"/>
         <activity android:name=".ViewPDFActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".verticales.viga.VigaNumberDegreeFreeActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".verticales.viga.VigaDefineForceVectorExt" android:screenOrientation="portrait"/>
-        <activity android:name=".verticales.viga.VigaDefineForceVector" android:screenOrientation="portrait"/>
+        <activity android:name=".estructuras.viga.VigaNumberDegreeFreeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".estructuras.viga.VigaDefineForceVectorExt" android:screenOrientation="portrait"/>
+        <activity android:name=".estructuras.viga.VigaDefineForceVector" android:screenOrientation="portrait"/>
         <activity android:name=".SplashActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,9 +29,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".verticales.viga.VigaMatrixOrderActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".verticales.viga.VigaDefineElementActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".verticales.viga.VigaElementsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".estructuras.viga.VigaMatrixOrderActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".estructuras.viga.VigaDefineElementActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".estructuras.viga.VigaElementsActivity" android:screenOrientation="portrait"/>
         <activity android:name=".SelectorActivity" android:screenOrientation="portrait"/>
     </application>
 

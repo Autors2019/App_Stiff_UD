@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.civil.stiff.verticales.portico.PorticoElementsActivity;
-import com.civil.stiff.verticales.viga.VigaElementsActivity;
+import com.civil.stiff.estructuras.portico.PorticoElementsActivity;
+import com.civil.stiff.estructuras.viga.VigaElementsActivity;
 
 public class SelectorActivity extends AppCompatActivity {
 

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/fondo"
     android:padding="15sp"
-    tools:context=".verticales.portico.PorticoNumberDegreeFreeActivity">
+    tools:context=".estructuras.portico.PorticoNumberDegreeFreeActivity">
     <!--Header-->
     <RelativeLayout
         android:id="@+id/layoutHeader"
