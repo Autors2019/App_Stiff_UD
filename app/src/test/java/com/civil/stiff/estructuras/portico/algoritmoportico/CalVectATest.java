@@ -1,7 +1,7 @@
 package com.civil.stiff.estructuras.portico.algoritmoportico;
 
 import com.civil.stiff.estructuras.portico.algoritmoportico.matrix.LongitudMatrizPortico;
-import com.civil.stiff.estructuras.trasversales.CalVectA;
+import com.civil.stiff.estructuras.transversales.CalVectA;
 
 import org.junit.Before;
 import org.junit.Test;

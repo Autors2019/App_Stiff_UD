@@ -15,10 +15,10 @@ import android.widget.Toast;
 import com.civil.stiff.R;
 import com.civil.stiff.estructuras.portico.algoritmoportico.TemplatePDFPortico;
 import com.civil.stiff.estructuras.portico.algoritmoportico.matrix.LongitudMatrizPortico;
-import com.civil.stiff.estructuras.trasversales.CalVectA;
+import com.civil.stiff.estructuras.transversales.CalVectA;
 import com.civil.stiff.estructuras.portico.algoritmoportico.SolvePortico;
 import com.civil.stiff.estructuras.portico.algoritmoportico.matrix.RegidityMatrixPortico;
-import com.civil.stiff.estructuras.trasversales.InterfaceValidadores;
+import com.civil.stiff.estructuras.transversales.InterfaceValidadores;
 
 import org.ejml.simple.SimpleMatrix;
 
@@ -92,9 +92,9 @@ public class PorticoNumberDegreeFreeActivity extends AppCompatActivity  implemen
         int numeroGL=0;
 
         switch (numElementos){
-            case 2: numeroGL=4;
+            case 2: numeroGL=7;
                 break;
-            case 3: numeroGL=6;
+            case 3: numeroGL=10;
                 break;
             default:
                 numeroGL=0;

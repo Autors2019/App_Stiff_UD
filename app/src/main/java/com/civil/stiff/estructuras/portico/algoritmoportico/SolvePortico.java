@@ -5,9 +5,9 @@ import android.util.Log;
 import com.civil.stiff.estructuras.portico.algoritmoportico.matrix.LongitudMatrizPortico;
 import com.civil.stiff.estructuras.portico.algoritmoportico.matrix.MatrixTransformation;
 import com.civil.stiff.estructuras.portico.algoritmoportico.matrix.RegidityMatrixPortico;
-import com.civil.stiff.estructuras.trasversales.IndexVector;
-import com.civil.stiff.estructuras.trasversales.SubMatrix;
-import com.civil.stiff.estructuras.trasversales.SubVector;
+import com.civil.stiff.estructuras.transversales.IndexVector;
+import com.civil.stiff.estructuras.transversales.SubMatrix;
+import com.civil.stiff.estructuras.transversales.SubVector;
 
 import org.ejml.simple.SimpleMatrix;
 

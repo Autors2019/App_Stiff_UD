@@ -15,10 +15,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.civil.stiff.estructuras.trasversales.InterfaceElementos;
-import com.civil.stiff.estructuras.trasversales.InterfaceValidadores;
-import com.civil.stiff.estructuras.trasversales.UnidadesLongitud;
-import com.civil.stiff.estructuras.trasversales.UnidadesPresion;
+import com.civil.stiff.estructuras.transversales.InterfaceElementos;
+import com.civil.stiff.estructuras.transversales.InterfaceValidadores;
+import com.civil.stiff.estructuras.transversales.UnidadesLongitud;
+import com.civil.stiff.estructuras.transversales.UnidadesPresion;
 import com.civil.stiff.estructuras.viga.algoritmoviga.matrix.RegidityMatrix;
 import com.civil.stiff.R;
 

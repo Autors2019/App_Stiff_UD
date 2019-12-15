@@ -7,9 +7,9 @@ package com.civil.stiff.estructuras.viga.algoritmoviga;
 import android.util.Log;
 
 import com.civil.stiff.estructuras.viga.algoritmoviga.matrix.RegidityMatrix;
-import com.civil.stiff.estructuras.trasversales.SubMatrix;
-import com.civil.stiff.estructuras.trasversales.IndexVector;
-import com.civil.stiff.estructuras.trasversales.SubVector;
+import com.civil.stiff.estructuras.transversales.SubMatrix;
+import com.civil.stiff.estructuras.transversales.IndexVector;
+import com.civil.stiff.estructuras.transversales.SubVector;
 
 import org.ejml.data.SingularMatrixException;
 import org.ejml.simple.SimpleMatrix;

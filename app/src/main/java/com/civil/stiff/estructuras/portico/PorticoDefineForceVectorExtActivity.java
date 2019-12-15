@@ -14,7 +14,7 @@ import android.widget.Toast;
 import com.civil.stiff.R;
 import com.civil.stiff.estructuras.portico.algoritmoportico.matrix.RegidityMatrixPortico;
 import com.civil.stiff.estructuras.portico.algoritmoportico.vector.ConsolidatedVectorPortico;
-import com.civil.stiff.estructuras.trasversales.InterfaceValidadores;
+import com.civil.stiff.estructuras.transversales.InterfaceValidadores;
 
 import org.ejml.simple.SimpleMatrix;
 

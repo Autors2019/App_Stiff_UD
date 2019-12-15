@@ -11,9 +11,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.civil.stiff.R;
-import com.civil.stiff.estructuras.trasversales.InterfaceElementos;
-import com.civil.stiff.estructuras.trasversales.InterfaceValidadores;
-import com.civil.stiff.estructuras.trasversales.IndexMatrix;
+import com.civil.stiff.estructuras.transversales.InterfaceElementos;
+import com.civil.stiff.estructuras.transversales.InterfaceValidadores;
+import com.civil.stiff.estructuras.transversales.IndexMatrix;
 import com.civil.stiff.estructuras.viga.algoritmoviga.matrix.RegidityMatrix;
 
 import org.ejml.simple.SimpleMatrix;

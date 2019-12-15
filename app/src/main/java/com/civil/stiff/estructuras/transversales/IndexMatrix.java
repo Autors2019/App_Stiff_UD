@@ -1,4 +1,4 @@
-package com.civil.stiff.estructuras.trasversales;
+package com.civil.stiff.estructuras.transversales;
 
 import com.civil.stiff.estructuras.viga.algoritmoviga.matrix.RegidityMatrix;
 

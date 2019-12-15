@@ -1,6 +1,6 @@
 package com.civil.stiff.estructuras.portico.algoritmoportico.matrix;
 
-import com.civil.stiff.estructuras.trasversales.InterfaceMatrixElemento;
+import com.civil.stiff.estructuras.transversales.InterfaceMatrixElemento;
 
 import org.ejml.simple.SimpleMatrix;
 

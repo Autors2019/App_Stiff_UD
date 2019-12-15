@@ -3,7 +3,7 @@ package com.civil.stiff.estructuras.portico.algoritmoportico.vector;
 import com.civil.stiff.estructuras.portico.algoritmoportico.matrix.LongitudMatrizPortico;
 import com.civil.stiff.estructuras.portico.algoritmoportico.matrix.MatrixTransformation;
 import com.civil.stiff.estructuras.portico.algoritmoportico.matrix.RegidityMatrixPortico;
-import com.civil.stiff.estructuras.trasversales.IndexVector;
+import com.civil.stiff.estructuras.transversales.IndexVector;
 
 
 import org.ejml.simple.SimpleMatrix;

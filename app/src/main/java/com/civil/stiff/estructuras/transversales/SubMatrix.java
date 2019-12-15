@@ -1,4 +1,4 @@
-package com.civil.stiff.estructuras.trasversales;
+package com.civil.stiff.estructuras.transversales;
 
 import org.ejml.simple.SimpleMatrix;
 

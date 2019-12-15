@@ -82,7 +82,6 @@
                     android:layout_marginLeft="45dp"
                     android:layout_marginRight="35dp"
                     android:layout_toRightOf="@+id/textoBase"
-                    android:textDirection="firstStrongRtl"
                     android:hint="0"
                     android:inputType="numberDecimal"
                     />
@@ -123,7 +122,6 @@
                     android:layout_marginRight="35dp"
                     android:layout_toRightOf="@+id/textoAltura"
                     android:inputType="numberDecimal"
-                    android:textDirection="firstStrongRtl"
                     android:hint="0"
                     />
 
@@ -161,7 +159,6 @@
                     android:layout_marginRight="35dp"
                     android:layout_toRightOf="@+id/textoLongitud"
                     android:inputType="numberDecimal"
-                    android:textDirection="firstStrongRtl"
                     android:hint="0"
                     />
 
@@ -199,7 +196,6 @@
                     android:layout_marginRight="25dp"
                     android:layout_toRightOf="@+id/textoElasticidad"
                     android:inputType="numberDecimal"
-                    android:textDirection="firstStrongRtl"
                     android:hint="0"
                     />
 

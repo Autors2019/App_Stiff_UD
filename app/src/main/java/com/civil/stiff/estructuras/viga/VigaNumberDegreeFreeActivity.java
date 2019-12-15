@@ -14,8 +14,8 @@ import android.widget.Toast;
 
 import com.civil.stiff.R;
 
-import com.civil.stiff.estructuras.trasversales.CalVectA;
-import com.civil.stiff.estructuras.trasversales.InterfaceValidadores;
+import com.civil.stiff.estructuras.transversales.CalVectA;
+import com.civil.stiff.estructuras.transversales.InterfaceValidadores;
 import com.civil.stiff.estructuras.viga.algoritmoviga.SolveViga;
 import com.civil.stiff.estructuras.viga.algoritmoviga.TemplatePDFViga;
 import com.civil.stiff.estructuras.viga.algoritmoviga.matrix.LongitudMatrizViga;

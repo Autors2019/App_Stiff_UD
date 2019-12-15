@@ -2,7 +2,7 @@ package com.civil.stiff.estructuras.portico.algoritmoportico.matrix;
 
 
 
-import com.civil.stiff.estructuras.trasversales.IndexMatrix;
+import com.civil.stiff.estructuras.transversales.IndexMatrix;
 
 import org.ejml.simple.SimpleMatrix;
 
