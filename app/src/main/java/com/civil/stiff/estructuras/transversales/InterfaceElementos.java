@@ -16,6 +16,18 @@ public interface InterfaceElementos {
         }
         return valor;
     }
+
+    default double  normalizarUnidadArea(UnidadesArea unidadesArea, double valor){
+
+        switch(unidadesArea){
+            case m2:  valor= valor;
+                break;
+            case cm2: valor= valor/1000;
+                break;
+
+        }
+        return valor;
+    }
     default double  normalizarUnidadPresion(UnidadesPresion unidadesPresion, double valor){
 
         switch(unidadesPresion){

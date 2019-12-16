@@ -10,4 +10,8 @@
         <item>MPa</item>
         <item>GPa</item>
     </string-array>
+    <string-array name="area">
+        <item>m2</item>
+        <item>cm2</item>
+    </string-array>
 </resources>
