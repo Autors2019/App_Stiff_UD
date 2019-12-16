@@ -1,5 +1,7 @@
 package com.civil.stiff.estructuras.cercha.algoritmocercha;
 
+import com.civil.stiff.estructuras.cercha.algoritmocercha.matrix.RegidityMatrixCercha;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;

@@ -1,4 +1,4 @@
-package com.civil.stiff.estructuras.cercha.algoritmocercha;
+package com.civil.stiff.estructuras.cercha.algoritmocercha.matrix;
 
 import com.civil.stiff.estructuras.transversales.InterfaceMatrixElemento;
 

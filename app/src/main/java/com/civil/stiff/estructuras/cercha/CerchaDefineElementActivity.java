@@ -15,8 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.civil.stiff.R;
-import com.civil.stiff.estructuras.cercha.algoritmocercha.RegidityMatrixCercha;
-import com.civil.stiff.estructuras.portico.algoritmoportico.matrix.RegidityMatrixPortico;
+import com.civil.stiff.estructuras.cercha.algoritmocercha.matrix.RegidityMatrixCercha;
 import com.civil.stiff.estructuras.transversales.InterfaceElementos;
 import com.civil.stiff.estructuras.transversales.InterfaceValidadores;
 import com.civil.stiff.estructuras.transversales.UnidadesArea;

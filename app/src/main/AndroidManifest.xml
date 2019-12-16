@@ -12,9 +12,16 @@
         android:roundIcon="@mipmap/stiff_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".estructuras.cercha.CerchaMatrixOrderActivity"></activity>
-        <activity android:name=".estructuras.cercha.CerchaDefineElementActivity" />
-        <activity android:name=".estructuras.cercha.CerchaElementsActivity" />
+        <activity android:name=".estructuras.cercha.CerchaDefineForceVectorActivity"></activity>
+        <activity
+            android:name=".estructuras.cercha.CerchaMatrixOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".estructuras.cercha.CerchaDefineElementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".estructuras.cercha.CerchaElementsActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".estructuras.portico.PorticoNumberDegreeFreeActivity"
             android:screenOrientation="portrait" />
