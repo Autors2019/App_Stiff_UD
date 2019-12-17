@@ -6,6 +6,642 @@
     android:layout_height="match_parent"
     android:background="@color/fondo"
     android:padding="15dp"
-    tools:context=".estructuras.cercha.CerchaDefineForceVectorActivity">
+    tools:context=".estructuras.cercha.CerchaDefineForceVectorExtActivity">
+    <!--Header-->
+    <RelativeLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logo"
+            android:layout_alignParentLeft="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="casual"
+            android:textColor="@color/Titulo"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:text="Cercha"
+            />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/subTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutHeader"
+        android:fontFamily="casual"
+        android:textSize="22sp"
+        android:textColor="@color/Titulo"
+        android:textAlignment="center"
+        android:text="Diligencie el vector de fuerzas externas total en los nodos"
+        />
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/subTitulo1"
+        android:layout_below="@+id/subTitulo">
+        <RelativeLayout
+            android:id="@+id/containerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--entrada 1-->
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloY1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="Y =  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloY1"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+            <!--entrada 2-->
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt1"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloM1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="M=  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloM1"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+            <!--entrada 3-->
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt2"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloY2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="Y =  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloY2"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+            <!--entrada 4-->
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt3"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloM4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="M=  "
+                    android:layout_centerVertical="true" />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloM4"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+            <!--entrada 5-->
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt4"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloY5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="Y =  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt5"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloY5"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+            <!--entrada 6-->
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt5"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloM6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="M=  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt6"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloM6"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+            <!--entrada 7-->
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt6"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloY7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="Y =  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt7"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloY7"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+            <!--entrada 8-->
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt7"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloM8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="M=  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt8"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloM8"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+            <!--entrada 9-->
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt8"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloY9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="Y =  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt9"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloY9"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+            <!--entrada 10-->
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt9"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloM10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="M=  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt10"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloM10"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+            <!--entrada 11-->
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt10"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloY11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="Y =  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt11"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloY11"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+            <!--entrada 12-->
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt11"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloM12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="M=  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt12"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloM12"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+            <!--entrada 13-->
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt12"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloY13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text=" Y=  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt13"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloY13"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+            <!--entrada 14-->
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt13"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloM14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="M=  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt14"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloM14"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+            <!--entrada 15-->
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt14"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloY15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text=" Y=  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt15"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloY15"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+            <!--entrada 16-->
+            <RelativeLayout
+                android:id="@+id/layoutVectorExt16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutVectorExt15"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:id="@+id/subTituloM16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="M=  "
+                    android:layout_centerVertical="true"
+
+
+                    />
+
+                <EditText
+                    android:id="@+id/entradaVectorExt16"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:layout_toRightOf="@+id/subTituloM16"
+                    android:textColor="@color/Titulo"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:hint="0"
+
+                    />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+    <!--sub titulo-->
+    <TextView
+        android:id="@+id/subTitulo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recuerde ingresar los valores en el orden que le dio a la estructura"
+        android:layout_above="@+id/botones"
+        android:fontFamily="casual"
+        android:textSize="15sp"
+        android:textColor="@color/Titulo"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        />
+    <!--Botones-->
+    <RelativeLayout
+        android:id="@+id/botones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        >
+        <Button
+            android:id="@+id/bAtras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textAllCaps="false"
+            android:fontFamily="casual"
+            android:textColor="@color/Titulo"
+            android:textSize="22sp"
+            android:text="Atras"
+            android:onClick="onClick"
+            />
+        <Button
+            android:id="@+id/bSiguiente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textAllCaps="false"
+            android:fontFamily="casual"
+            android:textColor="@color/Titulo"
+            android:textSize="22sp"
+            android:text="Siguiente"
+            android:onClick="onClick"
+            />
+    </RelativeLayout>
 
 </RelativeLayout>

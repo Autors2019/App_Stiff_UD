@@ -110,7 +110,7 @@ public class CerchaMatrixOrderActivity extends AppCompatActivity implements Inte
                 break;
             case R.id.bGuardar: guardarOrndenElementos();
                 break;
-            case R.id.bSiguiente: intent= new Intent(CerchaMatrixOrderActivity.this, CerchaDefineForceVectorActivity.class);
+            case R.id.bSiguiente: intent= new Intent(CerchaMatrixOrderActivity.this, CerchaDefineForceVectorExtActivity.class);
                 Bundle bundle= new Bundle();
                 bundle.putInt("numeroElementos", numElementos);
                 bundle.putSerializable("regidityMatrixCerchas",regidityMatrixCerchas);

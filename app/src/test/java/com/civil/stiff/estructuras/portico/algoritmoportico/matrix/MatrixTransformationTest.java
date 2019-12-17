@@ -7,7 +7,7 @@ public class MatrixTransformationTest {
 
     @Test
     public void calculate() {
-        SimpleMatrix simpleMatrix= MatrixTransformation.calculate(53.13);
+        SimpleMatrix simpleMatrix= MatrixTransformationPortico.calculate(53.13);
         simpleMatrix.print();
     }
 }

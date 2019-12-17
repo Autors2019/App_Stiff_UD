@@ -8,43 +8,32 @@ import android.util.Log;
 import com.civil.stiff.R;
 import com.civil.stiff.estructuras.cercha.algoritmocercha.matrix.RegidityMatrixCercha;
 
+import org.ejml.simple.SimpleMatrix;
 
 import java.util.ArrayList;
 
-public class CerchaDefineForceVectorActivity extends AppCompatActivity {
-    //Objetos recibidos
+public class CerchaNumberDegreeFreeActivity extends AppCompatActivity {
+    // Objetos recibidos
     private int numElementos;
     private ArrayList<RegidityMatrixCercha> regidityMatrixCerchas;
     private ArrayList<Integer[]> ordenElementos;
+    private SimpleMatrix matrizConsolidada, vectorFuerzasExt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cercha_define_force_vector);
-        Bundle bundle = getIntent().getExtras();
-        if (bundle != null) {
+        setContentView(R.layout.activity_cercha_number_degree_free);
+        Bundle bundle= getIntent().getExtras();
+        if(bundle!=null){
             numElementos = bundle.getInt("numeroElementos");
             regidityMatrixCerchas = (ArrayList<RegidityMatrixCercha>) bundle.getSerializable("regidityMatrixCerchas");
             ordenElementos = (ArrayList<Integer[]>) bundle.getSerializable("ordenElementos");
-            // Log orden de  elementos
-            for (Integer[] vector : ordenElementos) {
-                for (int i : vector) {
-                    Log.i("ordenElementos= ", Integer.toString(i));
-                }
-            }
-            /*
-            // Calcular matriz consolidada
-            try {
-
-            }
-            catch (Exception e){
-                Log.e( "matrizConsolidada: ", e.toString());
-            }*/
-
+            matrizConsolidada= (SimpleMatrix) bundle.getSerializable("matrizConsolidada");
+            vectorFuerzasExt= (SimpleMatrix) bundle.getSerializable("vectorFuerzasExt");
+            // Log matrices
+            Log.i("matrizConsolidada", matrizConsolidada.toString());
+            Log.i("vectorFuerzasExt", vectorFuerzasExt.toString());
         }
+
     }
-
-
 }
-
-

@@ -3,7 +3,7 @@ package com.civil.stiff.estructuras.portico.algoritmoportico;
 import android.util.Log;
 
 import com.civil.stiff.estructuras.portico.algoritmoportico.matrix.LongitudMatrizPortico;
-import com.civil.stiff.estructuras.portico.algoritmoportico.matrix.MatrixTransformation;
+import com.civil.stiff.estructuras.portico.algoritmoportico.matrix.MatrixTransformationPortico;
 import com.civil.stiff.estructuras.portico.algoritmoportico.matrix.RegidityMatrixPortico;
 import com.civil.stiff.estructuras.transversales.IndexVector;
 import com.civil.stiff.estructuras.transversales.SubMatrix;
@@ -73,7 +73,7 @@ public class SolvePortico {
                 orderElementosU.add(t, ordenElementos.get(i)[t]);
             }
             //Calculo reaaciones
-            reacciones.add(regidityMatrixPorticos.get(i).calculate().mult(MatrixTransformation.calculate(regidityMatrixPorticos.get(i).getAngulo())).mult(SubVector.calculate(orderElementosU, D)).plus(vectoresFuerzasInt.get(i)));
+            reacciones.add(regidityMatrixPorticos.get(i).calculate().mult(MatrixTransformationPortico.calculate(regidityMatrixPorticos.get(i).getAngulo())).mult(SubVector.calculate(orderElementosU, D)).plus(vectoresFuerzasInt.get(i)));
         }
         Log.i("Portico: calculoIncognitas: reacciIntP=", reacciones.toString());
 

@@ -1,7 +1,7 @@
 package com.civil.stiff.estructuras.portico.algoritmoportico.vector;
 
 import com.civil.stiff.estructuras.portico.algoritmoportico.matrix.LongitudMatrizPortico;
-import com.civil.stiff.estructuras.portico.algoritmoportico.matrix.MatrixTransformation;
+import com.civil.stiff.estructuras.portico.algoritmoportico.matrix.MatrixTransformationPortico;
 import com.civil.stiff.estructuras.portico.algoritmoportico.matrix.RegidityMatrixPortico;
 import com.civil.stiff.estructuras.transversales.IndexVector;
 
@@ -17,7 +17,7 @@ public class ConsolidatedVectorPortico {
         SimpleMatrix k= new SimpleMatrix(LongitudMatrizPortico.calculate(numeroElementos), 1);
         //Calcular vector consolidada
         for(int i=0; i<vectoresFuerzasInt.size(); i++){
-            SimpleMatrix K_n= MatrixTransformation.calculate(regidityMatrixPorticos.get(i).getAngulo()).transpose().mult(vectoresFuerzasInt.get(i));
+            SimpleMatrix K_n= MatrixTransformationPortico.calculate(regidityMatrixPorticos.get(i).getAngulo()).transpose().mult(vectoresFuerzasInt.get(i));
             SimpleMatrix Delta_Kn= IndexVector.calculate(K_n, ordenElementos.get(i), LongitudMatrizPortico.calculate(numeroElementos));
             k= k.plus(Delta_Kn);
         }
