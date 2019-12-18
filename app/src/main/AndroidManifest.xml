@@ -12,8 +12,10 @@
         android:roundIcon="@mipmap/stiff_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".estructuras.cercha.CerchaNumberDegreeFreeActivity"></activity>
-        <activity android:name=".estructuras.cercha.CerchaDefineForceVectorExtActivity" />
+        <activity android:name=".estructuras.cercha.CerchaNumberDegreeFreeActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".estructuras.cercha.CerchaDefineForceVectorExtActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".estructuras.cercha.CerchaMatrixOrderActivity"
             android:screenOrientation="portrait" />
