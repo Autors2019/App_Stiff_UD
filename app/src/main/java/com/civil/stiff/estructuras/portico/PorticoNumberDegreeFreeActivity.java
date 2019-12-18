@@ -126,6 +126,7 @@ public class PorticoNumberDegreeFreeActivity extends AppCompatActivity  implemen
     private void calcularPortico(){
         if(validadorSpinners(spinners)) {
             // Caclcular  vector b
+            b.clear();
             for (int i = 0; i < spinners.size(); i++) {
                 b.add(i, spinners.get(i).getSelectedItemPosition());
             }

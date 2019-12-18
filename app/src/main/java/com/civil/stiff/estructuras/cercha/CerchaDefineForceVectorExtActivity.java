@@ -66,6 +66,7 @@ public class CerchaDefineForceVectorExtActivity extends AppCompatActivity  imple
             numElementos = bundle.getInt("numeroElementos");
             regidityMatrixCerchas = (ArrayList<RegidityMatrixCercha>) bundle.getSerializable("regidityMatrixCerchas");
             ordenElementos = (ArrayList<Integer[]>) bundle.getSerializable("ordenElementos");
+
             // Log orden de  elementos
             for (Integer[] vector : ordenElementos) {
                 for (int i : vector) {
@@ -143,7 +144,7 @@ public class CerchaDefineForceVectorExtActivity extends AppCompatActivity  imple
                 Bundle bundle= new Bundle();
                 if(siguiente()) {
                     bundle.putInt("numeroElementos", numElementos);
-                    bundle.putSerializable("regidityMatrixPorticos", regidityMatrixCerchas);
+                    bundle.putSerializable("regidityMatrixCerchas", regidityMatrixCerchas);
                     bundle.putSerializable("ordenElementos", ordenElementos);
                     bundle.putSerializable("matrizConsolidada",matrizConsolidada);
                     bundle.putSerializable("vectorFuerzasExt",vectorFuerzasExt);

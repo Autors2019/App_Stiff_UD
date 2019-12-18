@@ -42,7 +42,7 @@ public class CerchaDefineElementActivity extends AppCompatActivity  implements I
     private UnidadesLongitud unidadLongitud;
     private UnidadesPresion unidadElasticidad;
     private int indexMatrix=1;
-    private ArrayList<RegidityMatrixCercha> regidityMatrixCercha;
+    private ArrayList<RegidityMatrixCercha> regidityMatrixCerchas;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +60,7 @@ public class CerchaDefineElementActivity extends AppCompatActivity  implements I
         bGuardar= findViewById(R.id.bGuardar);
         bSiguiente= findViewById(R.id.bSiguiente);
         bSiguiente.setEnabled(false);
-        regidityMatrixCercha= new ArrayList<>();
+        regidityMatrixCerchas = new ArrayList<>();
         Bundle bundle= getIntent().getExtras();
         if(bundle!=null){
             numElementos = bundle.getInt("numeroElementos");
@@ -139,7 +139,7 @@ public class CerchaDefineElementActivity extends AppCompatActivity  implements I
 
 
         if(validarCampo(etArea) && validarCampo(etLongitud)&& validarCampo(etElasticidad) && validarCampoCC(this.etAngulo)){
-            regidityMatrixCercha.add((indexMatrix-1), new RegidityMatrixCercha(normalizarUnidadArea(unidadArea,Double.parseDouble(etArea.getText().toString())),
+            regidityMatrixCerchas.add((indexMatrix-1), new RegidityMatrixCercha(normalizarUnidadArea(unidadArea,Double.parseDouble(etArea.getText().toString())),
                     normalizarUnidadLonitud(unidadLongitud,Double.parseDouble(etLongitud.getText().toString())),
                     normalizarUnidadPresion(unidadElasticidad,Double.parseDouble(etElasticidad.getText().toString())), Double.parseDouble(this.etAngulo.getText().toString())));
 
@@ -183,7 +183,7 @@ public class CerchaDefineElementActivity extends AppCompatActivity  implements I
             case R.id.bSiguiente:intent= new Intent(CerchaDefineElementActivity.this, CerchaMatrixOrderActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putInt("numeroElementos",numElementos);
-                bundle.putSerializable("regidityMatrixPorticos", regidityMatrixCercha);
+                bundle.putSerializable("regidityMatrixCerchas", regidityMatrixCerchas);
                 intent.putExtras(bundle);
                 startActivity(intent);
                 break;

@@ -53,14 +53,12 @@ public class CerchaMatrixOrderActivity extends AppCompatActivity implements Inte
         // Instancias de variables atributo
         ordenElementos= new ArrayList<>();
 
-        if(bundle!=null){
-            numElementos= bundle.getInt("numeroElementos");
-            regidityMatrixCerchas= ( ArrayList<RegidityMatrixCercha>)bundle.getSerializable("regidityMatrixPorticos");
-            Log.i("PorticoMatrixOrderActivity: numeroElementos= ", Integer.toString(numElementos));
-            for(RegidityMatrixCercha m: regidityMatrixCerchas){
-                Log.i("PorticoMatrixOrderActivity: angulo=", Double.toString(m.getAngulo()));
-                Log.i("PorticoMatrixOrderActivity: regidityMatrixPorticos=", m.calculate().toString());
-            }
+        if(bundle!=null) {
+            numElementos = bundle.getInt("numeroElementos");
+            regidityMatrixCerchas = (ArrayList<RegidityMatrixCercha>) bundle.getSerializable("regidityMatrixCerchas");
+            Log.i("CerchaMatrixOrderActivity: numeroElementos= ", Integer.toString(numElementos));
+            //Log matrix
+            regidityMatrixCerchas.forEach(m->Log.i("regidityMatrixCerchas", m.calculate().toString()));
         }
         // Set adapatador
         adaptadorSpinner= new ArrayAdapter(this, android.R.layout.simple_spinner_item, numeroGradosLibertad(numElementos));

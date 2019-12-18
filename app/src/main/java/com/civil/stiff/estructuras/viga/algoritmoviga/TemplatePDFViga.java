@@ -31,7 +31,7 @@ public class TemplatePDFViga extends TemplatePDF{
         Date currentTime = Calendar.getInstance().getTime();
         String dtf= DateFormat.getDateInstance(DateFormat.SHORT).format(currentTime);
         openDocument();
-        addMetaData("Stiff", "Caliculo Viga", "Stiff");
+        addMetaData("Stiff", "Calculo Viga", "Stiff");
         addTitles("Stiff", "Calculo Viga", dtf);
         addParagraph("Matrices de rigidez: ");
         // Imprimir matrices de regidez
@@ -51,7 +51,7 @@ public class TemplatePDFViga extends TemplatePDF{
         // Imprimir Reacciones
         addParagraph("Reacciones: ");
         createMatrix(castReaccionesElementos(a.toArray(new Integer[a.size()])),solveViga.getF_a(), 100);
-        // Fuezas internas
+        // Fuerzas internas
         addParagraph("Fuerzas Internas: ");
         for(int i=0; i< solveViga.getReacciIntP().size(); i++){
             createMatrix(castReaccionesElementos(arrayOrdenElementos.get(i)),solveViga.getReacciIntP().get(i), 50);
@@ -60,7 +60,7 @@ public class TemplatePDFViga extends TemplatePDF{
         viewPDF();
     }
 
-    // Cast Orden Elemetos PDF
+    // Cast Orden Elementos PDF
     private String[] castOrdenElementos(Integer[] ordenElementos) {
         String [] cast= new String[ordenElementos.length];
         for(int i=0; i< ordenElementos.length; i++){
