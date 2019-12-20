@@ -36,7 +36,7 @@
         android:id="@+id/subTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Por ultimo indique la cantidad de grados de libertad no restringidos para la estructura"
+        android:text="Por último indique la cantidad de grados de libertad no restringidos para la estructura"
         android:fontFamily="casual"
         android:textSize="19sp"
         android:layout_below="@id/layoutHeader"

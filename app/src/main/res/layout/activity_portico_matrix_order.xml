@@ -50,7 +50,7 @@
                 android:textSize="22sp"
                 android:textColor="@color/Titulo"
                 android:textAlignment="center"
-                android:text="Indique el orden la matriz de regidez para cada elemento"
+                android:text="Indique el orden de la matriz de rigidez para cada elemento"
                 />
             <TextView
                 android:id="@+id/numeroElemento"

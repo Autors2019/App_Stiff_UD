@@ -43,7 +43,7 @@
         android:textStyle="bold"
         android:textAlignment="center"
         android:textSize="22sp"
-        android:text="Indique la catidad de elementos que componen la cercha"
+        android:text="Indique la cantidad de elementos que componen la cercha"
         />
     <!--RadioButton's-->
     <ScrollView

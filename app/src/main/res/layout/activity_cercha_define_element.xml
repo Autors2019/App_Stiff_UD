@@ -78,7 +78,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:fontFamily="casual"
-                    android:text="Area"
+                    android:text="Área"
                     android:textSize="22sp"
                     android:layout_centerVertical="true"
                     />
@@ -116,7 +116,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:fontFamily="casual"
-                    android:text="Longitd"
+                    android:text="Longitud"
                     android:textSize="22sp"
                     android:layout_centerVertical="true"
                     />
@@ -125,7 +125,7 @@
                     android:id="@+id/entradaLongitud"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="18dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="35dp"
                     android:layout_toRightOf="@+id/textoLongitud"
                     android:inputType="numberDecimal"
