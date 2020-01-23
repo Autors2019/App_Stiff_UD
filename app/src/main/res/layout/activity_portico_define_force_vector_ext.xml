@@ -65,7 +65,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="22sp"
-                    android:text="Y =  "
+                    android:text="X =  "
                     android:layout_centerVertical="true"
 
 
@@ -100,7 +100,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="22sp"
-                    android:text="M=  "
+                    android:text="Y =  "
                     android:layout_centerVertical="true"
 
 
@@ -134,7 +134,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="22sp"
-                    android:text="Y =  "
+                    android:text="M=  "
                     android:layout_centerVertical="true"
 
 
@@ -168,7 +168,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="22sp"
-                    android:text="M=  "
+                    android:text="X=  "
                     android:layout_centerVertical="true"
 
 
@@ -270,7 +270,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="22sp"
-                    android:text="Y =  "
+                    android:text="X=  "
                     android:layout_centerVertical="true"
 
 
@@ -304,7 +304,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="22sp"
-                    android:text="M=  "
+                    android:text="Y =  "
                     android:layout_centerVertical="true"
 
 
@@ -338,7 +338,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="22sp"
-                    android:text="Y =  "
+                    android:text="M=  "
                     android:layout_centerVertical="true"
 
 
@@ -372,7 +372,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="22sp"
-                    android:text="M=  "
+                    android:text="X=  "
                     android:layout_centerVertical="true"
 
 
